@@ -3,196 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cá Nhân - Môn Công Nghệ Số</title>
-    <style>
-        /* Định dạng cơ bản cho toàn bộ trang */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Thanh điều hướng (Navbar) */
-        header {
-            background-color: #1e4620; /* Màu xanh lá đậm như đề bài */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        /* Khung chứa nội dung chính */
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
-
-        /* Các tiêu đề mục */
-        h2 {
-            color: #1e4620;
-            border-bottom: 2px solid #1e4620;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-
-        /* Định dạng danh sách dự án/bài tập */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-card {
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 15px;
-            background: #fff;
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            color: #2e6930;
-            font-size: 16px;
-        }
-
-        /* Nút bấm xem sản phẩm */
-        .btn {
-            display: inline-block;
-            background-color: #2e6930;
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background-color: #1e4620;
-        }
-
-        /* Phần chân trang (Footer) */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
+    <title>Trang Chủ | Personal Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>PORTFOLIO KỸ THUẬT SỐ</h1>
-        <p>Môn: Nhập môn Công nghệ số và Ứng dụng AI</p>
-        <nav>
-            <a href="#about">Giới Thiệu</a> | 
-            <a href="#projects">Dự Án Bài Tập</a> | 
-            <a href="#summary">Tổng Kết</a>
-        </nav>
+    <header class="navbar">
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Giới thiệu</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Các Dự Án ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projects/bai1.html">Bài 1: Thao tác tệp tin</a></li>
+                            <li><a href="projects/bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
+                            <li><a href="projects/bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
+                            <li><a href="projects/bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
+                            <li><a href="projects/bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
+                            <li><a href="projects/bai6.html">Bài 6: AI có trách nhiệm</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="reflection.html">Trang Tổng kết</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-
-        <section id="about">
-            <h2>I. Trang Giới Thiệu</h2>
-            <p><strong>Họ và tên:</strong> Nguyễn Văn A</p>
-            <p><strong>Ngành học / Lớp:</strong> Công nghệ thông tin - K24</p>
-            <p><strong>Mục tiêu học tập:</strong> Làm chủ các công cụ công nghệ số, hiểu sâu về nguyên lý hoạt động của Trí tuệ nhân tạo (AI) và biết cách ứng dụng AI vào học tập, nghiên cứu một cách có trách nhiệm.</p>
-            <p><strong>Mục tiêu Portfolio:</strong> Thể hiện các kỹ năng số đã được trang bị, lưu trữ các sản phẩm cá nhân để dễ dàng chia sẻ và đánh giá kết quả học tập.</p>
-        </section>
-
-        <section id="projects">
-            <h2>II. Trang Dự Án (6 Bài Tập Thành Phần)</h2>
-            <p>Dưới đây là các kết quả bài tập đã hoàn thành trong suốt học kỳ:</p>
-
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <h3>Bài 1: Máy tính & Thiết bị ngoại vi</h3>
-                    <p>Trình bày cấu trúc thư mục tối ưu, quy tắc đặt tên tệp và ảnh chụp minh họa hệ thống quản lý dữ liệu.</p>
-                    <a href="#" class="btn" target="_blank">Xem sản phẩm</a>
+    <main class="main-wrapper">
+        <section class="hero-section fade-in">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">SYSTEM V1.0 // ACTIVE</span>
+                    <h1>Dương Minh Phương <br><span class="gradient-text">Mechatronics Student</span></h1>
+                    <div class="intro-box">
+                        <p class="hero-desc">Tôi là <strong>Dương Minh Phương</strong>, hiện là sinh viên ngành Cơ điện tử tại Trường Đại học Công nghệ. Định hướng của tôi là nghiên cứu sâu về các hệ thống phần cứng thông minh, lập trình nhúng và ứng dụng Trí tuệ nhân tạo (AI) vào tự động hóa.</p>
+                        <p class="hero-desc"><strong>Sở thích:</strong> Lập trình hệ thống, phát triển ứng dụng tự động hóa quy trình và tối ưu hóa thuật toán giải quyết bài toán kỹ thuật thực tế.</p>
+                    </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>Bài 2: Khai thác dữ liệu học thuật</h3>
-                    <p>Kết quả tìm kiếm bằng thuật toán nâng cao và bảng đánh giá độ tin cậy của các nguồn tài liệu.</p>
-                    <a href="#" class="btn" target="_blank">Xem báo cáo</a>
+                <div class="hero-visual">
+                    <div class="product-frame">
+                        <img src="assets/images/avatar.jpg" alt="Chân dung Dương Minh Phương" class="product-img">
+                        <div class="spec-tag" id="live-clock">SYS_TIME // LOADING...</div>
+                    </div>
                 </div>
-
-                <div class="project-card">
-                    <h3>Bài 3: Tổng quan về AI & Prompt</h3>
-                    <p>Bảng so sánh kỹ thuật viết Prompt ban đầu và Prompt cải tiến để tối ưu kết quả đầu ra từ AI.</p>
-                    <a href="#" class="btn" target="_blank">Xem kết quả</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Bài 4: Giao tiếp & Hợp tác số</h3>
-                    <p>Minh chứng sử dụng công cụ quản lý dự án nhóm trực tuyến (Trello/Notion) để điều phối công việc.</p>
-                    <a href="#" class="btn" target="_blank">Xem minh chứng</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Bài 5: Sáng tạo nội dung số</h3>
-                    <p>Sản phẩm hoàn chỉnh (hình ảnh/video/bài viết) được lên ý tưởng và thực hiện với sự hỗ trợ của AI sinh thành.</p>
-                    <a href="#" class="btn" target="_blank">Xem sản phẩm</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Bài 6: An toàn & Liêm chính học thuật</h3>
-                    <p>Xây dựng bộ nguyên tắc cá nhân về việc sử dụng AI có trách nhiệm, chống đạo văn trong học tập.</p>
-                    <a href="#" class="btn" target="_blank">Xem nguyên tắc</a>
-                </div>
-
             </div>
         </section>
 
-        <section id="summary">
-            <h2>III. Trang Tổng Kết</h2>
-            <ul>
-                <li><strong>Cảm nhận cá nhân:</strong> Quá trình thực hiện dự án Portfolio này giúp em biết cách hệ thống hóa kiến thức một cách khoa học và trực quan hơn.</li>
-                <li><strong>Kiến thức tâm đắc:</strong> Kỹ năng ứng dụng AI vào việc tối ưu hóa hiệu suất làm việc và tư duy tìm kiếm thông tin học thuật chuẩn xác.</li>
-                <li><strong>Thách thức gặp phải:</strong> Việc tối ưu hóa giao diện trang web bằng mã nguồn để hiển thị mượt mà trên cả điện thoại và máy tính.</li>
-            </ul>
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>ĐỊNH HƯỚNG PHÁT TRIỂN</h2>
+                    <p class="subtitle">Chiến lược xây dựng năng lực học thuật và tác phong công nghệ số</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📚</div>
+                        <h3>Mục tiêu Học tập</h3>
+                        <p>Làm chủ khối kiến thức cốt lõi về Cơ điện tử; liên tục cập nhật các công cụ kỹ thuật số mới, thuật toán thông minh và phương pháp nghiên cứu độc lập để tối ưu hóa hiệu suất học tập.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Định hướng Nghề nghiệp</h3>
+                        <p>Trở thành kỹ sư tích hợp hệ thống, có khả năng kết nối linh hoạt giữa phần cứng cơ khí, mạch điện tử và phần mềm thông minh để kiến tạo các giải pháp tự động hóa hữu ích.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Chuẩn mực Vận hành</h3>
+                        <p>Xây dựng phong cách làm việc kỷ luật và chuyên nghiệp. Cam kết tuân thủ nghiêm túc các nguyên tắc về liêm chính học thuật, đạo đức công nghệ và trích dẫn dữ liệu minh bạch.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-    </div>
+        <section class="ecosystem-section fade-in">
+            <div class="container">
+                <div class="ecosystem-box">
+                    <h2>MỤC TIÊU CỦA PORTFOLIO</h2>
+                    <p class="accent-text">Hệ thống Portfolio này đóng vai trò là nền tảng số hóa tích hợp toàn diện nhằm:</p>
+                    <ul class="eco-list">
+                        <li><strong>Tổng hợp & Minh chứng:</strong> Hệ thống hóa trực quan kết quả của 06 bài tập thành phần thuộc môn học Nhập môn Công nghệ số.</li>
+                        <li><strong>Đánh giá Năng lực:</strong> Phản ánh rõ ràng quá trình tiếp thu tri thức, tư duy phân tích và kỹ năng giải quyết vấn đề trên môi trường số.</li>
+                        <li><strong>Thương hiệu Cá nhân:</strong> Định hình hồ sơ năng lực trực tuyến chuyên nghiệp, tạo bước đệm vững chắc cho lộ trình phát triển tương lai.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>© 2026 - Portfolio thiết kế bởi Nguyễn Văn A. Mọi quyền được bảo lưu.</p>
+    <footer class="product-footer">
+        <div class="container footer-content">
+            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học.</p>
+            <p class="serial">CODE: MECH.UET // GH-PAGES</p>
+        </div>
     </footer>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

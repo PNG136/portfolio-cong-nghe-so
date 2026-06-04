@@ -1,0 +1,19 @@
+my-portfolio/
+│
+├── index.html              # Trang chủ (Giới thiệu bản thân & Mục tiêu)
+├── projects.html           # Trang dự án chính (Danh mục/Lưới chứa 6 bài tập)
+├── reflection.html         # Trang tổng kết (Trải nghiệm & Cảm nhận)
+│
+├── projects/               # TẠO MỚI: Thư mục chứa 6 trang con bài tập
+│   ├── bai1.html           # Thao tác tệp tin và thư mục
+│   ├── bai2.html           # Tìm kiếm học thuật
+│   ├── bai3.html           # Viết Prompt hiệu quả
+│   ├── bai4.html           # Công cụ hợp tác nhóm
+│   ├── bai5.html           # AI tạo sinh nội dung
+│   └── bai6.html           # AI có trách nhiệm
+│
+├── assets/                 # Thư mục chứa tài nguyên số 
+│   ├── css/                # File style.css dùng chung cho toàn bộ web [cite: 1, 2]
+│   ├── js/                 # File script.js xử lý logic [cite: 1, 2]
+│   └── images/             # Ảnh minh họa bài tập 
+└── documents/              # File PDF sản phẩm gốc đính kèm [cite: 1, 3]

@@ -1,0 +1,48 @@
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // 1. HIỆU ỨNG ĐỒNG HỒ THỜI GIAN THỰC (LIVE SYSTEM CLOCK)
+    const clockElement = document.getElementById("live-clock");
+    
+    function updateClock() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        // Trình bày chuỗi thời gian dạng Log Hệ Thống: YYYY-MM-DD // HH:MM:SS
+        if (clockElement) {
+            clockElement.textContent = `SYS_TIME // ${year}-${month}-${day} [${hours}:${minutes}:${seconds}]`;
+        }
+    }
+    
+    // Cập nhật đồng hồ mỗi giây một lần
+    setInterval(updateClock, 1000);
+    updateClock(); // Chạy ngay lập tức khi tải trang
+
+
+    // 2. HIỆU ỨNG TỰ ĐỘNG TRIGGER HOẠT HỌA KHI CUỘN TRANG (SCROLL ANIMATION DETECTOR)
+    const fadeElements = document.querySelectorAll(".feature-card, .ecosystem-box");
+    
+    const observerOptions = {
+        root: null,
+        threshold: 0.1, // Chạy hiệu ứng khi 10% cấu thành lọt vào khung hình
+        rootMargin: "0px 0px -40px 0px"
+    };
+
+    const appearanceObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                appearanceObserver.unobserve(entry.target); // Chạy hiệu ứng 1 lần duy nhất
+            }
+        });
+    }, observerOptions);
+
+    fadeElements.forEach(element => {
+        // Gắn class fade-in ban đầu để kích hoạt lắng nghe cuộn trang
+        appearanceObserver.observe(element);
+    });
+});
