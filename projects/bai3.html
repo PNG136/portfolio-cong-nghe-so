@@ -3,27 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 3 | Viết Prompt hiệu quả cho các tác vụ học tập</title>
+    <title>Bài 3: Kỹ Thuật Prompt | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS cho hộp thoại Prompt và Kết quả */
+        .prompt-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .prompt-box {
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .prompt-box-header {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-basic { background: rgba(239, 68, 68, 0.1); color: #f87171; border-bottom-color: rgba(239, 68, 68, 0.2); }
+        .header-advanced { background: rgba(16, 185, 129, 0.1); color: #34d399; border-bottom-color: rgba(16, 185, 129, 0.2); }
+        
+        .prompt-content { padding: 1.5rem; }
+        .prompt-label { font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .prompt-text { font-family: monospace; background: #000; padding: 1rem; border-radius: 8px; color: #a5b4fc; font-size: 0.9rem; margin-bottom: 1.5rem; border: 1px solid rgba(79, 70, 229, 0.3); }
+        
+        .ai-result { background: rgba(255, 255, 255, 0.03); padding: 1rem; border-radius: 8px; font-size: 0.9rem; border-left: 3px solid var(--text-gray); }
+        .ai-result.success { border-left-color: #34d399; }
+        .ai-result.fail { border-left-color: #f87171; }
+
+        @media (max-width: 768px) {
+            .prompt-container { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">DMP // PORTFOLIO_OS</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Giới thiệu</a></li>
                     
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">Các Dự Án ▾</a>
+                        <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
                             <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
-                            <li><a href="bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
+                            <li><a href="bai3.html" style="color: var(--accent);">Bài 3: Kỹ thuật Prompt</a></li>
                             <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
                             <li><a href="bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
                             <li><a href="bai6.html">Bài 6: AI có trách nhiệm</a></li>
@@ -37,131 +74,143 @@
     </header>
 
     <main class="main-wrapper">
-        <section class="hero-section fade-in" style="padding-bottom: 1.5rem;">
-            <div class="container">
-                <a href="../index.html" class="link-arrow" style="font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">⇠ Quay lại Trang chủ</a>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; line-height: 1.2;">
-                    Bài 3: Kỹ Thuật Viết Prompt <br><span class="gradient-text">Hiệu Quả Với LLMs</span>
+        <section class="hero-section fade-in" style="padding-bottom: 2rem;">
+            <div class="container text-center" style="text-align: center;">
+                <span class="badge">BÀI TẬP 03 // MỤC 3.4</span>
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
+                    Nghệ Thuật <span class="gradient-text">Kỹ Sư Câu Lệnh (Prompt)</span>
                 </h1>
-                <p class="subtitle">Nghiên cứu Kỹ thuật Tối ưu hóa Câu lệnh (Prompt Engineering) trong không gian nhận thức học tập.</p>
+                <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Nghiên cứu tính hiệu quả của các cấu trúc Prompt trong việc kiểm soát và nâng cao chất lượng dữ liệu đầu ra của mô hình ngôn ngữ lớn (Gemini 3.1 Pro).</p>
             </div>
         </section>
 
-        <section class="features-section">
-            <div class="container" style="max-width: 1000px;">
-                
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                        <span style="font-size: 1.5rem;">🧬</span>
-                        <h3 style="margin-bottom: 0;">Mô hình thiết lập thực nghiệm</h3>
+        <section class="features-section" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container">
+                <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📝</div>
+                        <h3>Tác vụ 1: Tiếp nhận</h3>
+                        <p>Trích xuất và tóm tắt tài liệu học thuật. Mục tiêu: Kiểm tra khả năng nén thông tin, loại bỏ hiện tượng "ảo giác" (hallucination) và bảo toàn tính logic.</p>
                     </div>
-                    <p style="font-size: 0.95rem; text-align: justify; margin-bottom: 0.8rem;">
-                        Nhằm đánh giá biên độ hiệu quả của việc kiểm soát câu lệnh đầu vào đối với kiến trúc Transformer, bài báo cáo thiết lập một môi trường kiểm soát biến số nghiêm ngặt[cite: 984, 986, 1022]:
-                    </p>
-                    <ul style="list-style-type: '⚡ '; padding-left: 1rem; line-height: 1.6; font-size: 0.9rem; color: var(--text-gray);">
-                        <li><strong>Mô hình nền tảng:</strong> Google Gemini 3.1 Pro[cite: 990].</li>
-                        <li><strong>Kiểm soát biến số:</strong> Chủ đề xuyên suốt "Prompt Engineering trong xử lý dữ liệu của LLMs"[cite: 989].</li>
-                        <li><strong>Phân tầng nhận thức (3 Tác vụ):</strong> (1) Tiếp nhận - Tóm tắt văn bản học thuật; (2) Thấu hiểu - Giải thích khái niệm phức tạp (Chain-of-Thought); (3) Vận dụng/Đánh giá - Xây dựng ma trận câu hỏi kiểm tra[cite: 987, 988, 1014, 1048].</li>
-                    </ul>
+                    <div class="feature-card fade-in" style="border-color: var(--primary);">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Tác vụ 2: Thấu hiểu</h3>
+                        <p>Giải thích khái niệm phức tạp (Chain-of-Thought). Mục tiêu: Đánh giá khả năng phân rã kiến thức học thuật khô khan thành thông tin có tính sư phạm cao.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Tác vụ 3: Đánh giá</h3>
+                        <p>Thiết lập ma trận câu hỏi trắc nghiệm và tự luận. Mục tiêu: Đánh giá khả năng bám sát phân tầng nhận thức Bloom và tạo bộ nhiễu (distractors) tinh vi.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">📊</span>
-                        <h3 style="margin-bottom: 0;">Bảng tổng hợp đối chiếu và đánh giá hiệu quả</h3>
+        <section class="ecosystem-section fade-in" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: var(--bg-surface); max-width: 1140px; padding: 2rem;">
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <h2>🔬 CASE STUDY: PHÂN RÃ KHÁI NIỆM "CHAIN-OF-THOUGHT"</h2>
+                        <a href="../documents/Bài tập 3.2.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">📄 Xem Full Báo Cáo Thực Nghiệm</a>
                     </div>
                     
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; color: var(--text-gray);">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent); background: rgba(255,255,255,0.02);">
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 12%;">Mức độ câu lệnh</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 28%;">Tác vụ 1: Tóm tắt tài liệu [cite: 1024]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 28%;">Tác vụ 2: Giải thích khái niệm [cite: 1046]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 27%;">Tác vụ 3: Tạo bộ câu hỏi ôn tập [cite: 1068]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 5%; text-align: center;">Hiệu suất</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Cơ bản <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Zero-shot)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Văn bản tóm tắt nguyên khối, dài dòng, lặp ý và bỏ sót một số luận điểm phụ quan trọng ở cuối[cite: 1100, 1101].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Giải thích đậm chất kỹ thuật, lạm dụng thuật ngữ hàn lâm khô khan gây quá tải nhận thức cho người mới[cite: 1110, 1111].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Tạo câu hỏi rập khuôn ở mức độ ghi nhớ bề mặt đơn thuần; đáp án ký tự thuần túy không giải thích phản hồi[cite: 1073, 1121, 1122].</td>
-                                    <td style="padding: 1rem 0.5rem; text-align: center; color: #ef4444; font-weight: bold; vertical-align: top;">Thấp <br><span style="font-size:0.75rem; font-weight:400;">[cite: 1107, 1118, 1129]</span></td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Cải tiến <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Structured)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Trình bày dạng bullet points gãy gọn, thông tin nén chặt dưới 250 từ và bao hàm đủ 3 trường nội dung chính[cite: 1032, 1102, 1103].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Bố cục 3 phần rõ ràng: giảm bớt thuật ngữ khó, cấu trúc mạch lạc, bổ sung ví dụ toán học cơ bản[cite: 1055, 1112, 1113].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Tuân thủ nghiêm ngặt định dạng quy định (3 trắc nghiệm, 2 tự luận), bổ sung giải nghĩa ngắn gọn cho đáp án đúng[cite: 1076, 1123, 1124].</td>
-                                    <td style="padding: 1rem 0.5rem; text-align: center; color: #eab308; font-weight: bold; vertical-align: top;">Khá <br><span style="font-size:0.75rem; font-weight:400;">[cite: 1107, 1118, 1129]</span></td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Nâng cao <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Advanced Framework)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Cấu trúc phân tầng chuyên gia khoa học dữ liệu: Từ khóa ➔ Tổng quan súc tích ➔ Sơ đồ Markdown ➔ Nhận định ứng dụng sâu[cite: 1039, 1104, 1105].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Vận dụng vai Giáo sư kết hợp phép loại suy hình tượng độc đáo (lên kế hoạch du lịch) và đối chiếu trực quan cơ chế Standard vs CoT[cite: 1062, 1114, 1115, 1116].</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Thiết kế bài kiểm tra phân hóa theo Thang Bloom, xây dựng bẫy nhiễu tinh vi và phân tích bóc tách lỗi sai logic của 3 phương án sai[cite: 1081, 1082, 1125, 1126, 1127].</td>
-                                    <td style="padding: 1rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold; vertical-align: top;">Xuất sắc <br><span style="font-size:0.75rem; font-weight:400;">[cite: 1107, 1118, 1129]</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem;">
-                        <span style="font-size: 1.5rem;">🧠</span>
-                        <h3>Biện luận bản chất vận hành kỹ thuật</h3>
-                    </div>
-                    <p style="font-size: 0.9rem; text-align: justify; margin-bottom: 0.8rem;">
-                        Sự chênh lệch về chất lượng đầu ra xuất phát từ nguyên lý xác suất thống kê của kiến trúc Transformer[cite: 1131, 1132]. Khi tiếp nhận câu lệnh mơ hồ, LLM phản hồi theo phân phối xác suất mặc định trên toàn bộ không gian dữ liệu khổng lồ dẫn đến hiện tượng bề nổi và sai số logic[cite: 1132, 1191].
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.95rem; text-align: justify;">
+                        Sự thất bại của AI thường không xuất phát từ năng lực mô hình, mà từ sự thiếu hụt trong cấu trúc câu lệnh của người dùng. Dưới đây là minh chứng sự khác biệt hoàn toàn về chất lượng đầu ra giữa Prompt nguyên thủy và Prompt có cấu trúc kỹ thuật:
                     </p>
-                    <p style="font-size: 0.9rem; text-align: justify;">
-                        Ngược lại, các kỹ thuật bổ sung trong prompt nâng cao thực chất là quá trình <strong>"thu hẹp không gian xác suất"</strong> và thiết lập <strong>"giàn giáo nhận thức"</strong> cứng rắn[cite: 1133, 1135]. Kỹ thuật phân vai (Persona) ép mạng lưới neural tái phân bổ trọng số từ vựng chuyên gia [cite: 1139, 1141]; trong khi kỹ thuật Tư duy theo chuỗi (Chain-of-Thought) tạo ra vùng nhớ đệm ngắn hạn trên bề mặt văn bản để làm bàn đạp suy luận, chuyển hóa tác vụ phi tuyến tính phức tạp thành các bước xử lý tuyến tính nhân quả chặt chẽ tuyệt đối[cite: 1143, 1145, 1146, 1147].
+
+                    <div class="prompt-container">
+                        <div class="prompt-box">
+                            <div class="prompt-box-header header-basic">
+                                <span>⚠️ Phiên Bản 1: Prompt Cơ Bản (Zero-shot)</span>
+                                <span>Điểm: 2/10</span>
+                            </div>
+                            <div class="prompt-content">
+                                <div class="prompt-label">Câu lệnh đầu vào (Input)</div>
+                                <div class="prompt-text">
+                                    "Khái niệm Chain-of-Thought (CoT) trong các mô hình ngôn ngữ lớn là gì? Hãy giải thích."
+                                </div>
+                                <div class="prompt-label">Phân tích Kết quả đầu ra (Output)</div>
+                                <div class="ai-result fail">
+                                    <strong>Đánh giá: Rập khuôn & Quá tải thuật ngữ</strong><br>
+                                    AI truy xuất dữ liệu thụ động, trả về một đoạn văn bản nguyên khối chứa dày đặc thuật ngữ hàn lâm (autoregressive decoding, tokens, vector không gian...). Người mới bắt đầu hoàn toàn không thể tiếp thu, tạo ra rào cản nhận thức cực lớn.
+                                </div>
+                                <div style="margin-top: 1rem; text-align: center;">
+                                    <img src="../assets/images/bai3-basic.png" alt="Minh chứng Prompt Cơ bản" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--border);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prompt-box">
+                            <div class="prompt-box-header header-advanced">
+                                <span>✅ Phiên Bản 2: Prompt Nâng Cao (Role-playing + Analogy)</span>
+                                <span>Điểm: 10/10</span>
+                            </div>
+                            <div class="prompt-content">
+                                <div class="prompt-label">Câu lệnh đầu vào (Input)</div>
+                                <div class="prompt-text" style="border-color: rgba(16, 185, 129, 0.4);">
+                                    "Đóng vai trò là Giáo sư Khoa học Máy tính. Giải thích khái niệm 'Chain-of-Thought'. Yêu cầu: <br>
+                                    1. Định nghĩa dễ tiếp cận.<br>
+                                    2. Phép loại suy (Analogy): So sánh CoT với hoạt động tư duy thường ngày (ví dụ: giải toán).<br>
+                                    3. Phân tích đối chiếu: So sánh Standard Prompting và CoT Prompting."
+                                </div>
+                                <div class="prompt-label">Phân tích Kết quả đầu ra (Output)</div>
+                                <div class="ai-result success">
+                                    <strong>Đánh giá: Tính sư phạm xuất sắc</strong><br>
+                                    Kỹ thuật "Role-playing" kích hoạt luồng tri thức chuyên gia. AI tự động vẽ ra viễn cảnh sinh động (giải bài toán từng bước trên giấy nháp) để làm phép loại suy, giúp người học phá vỡ hoàn toàn "rào cản thuật ngữ" và thấu hiểu bản chất cơ chế hoạt động của thuật toán.
+                                </div>
+                                <div style="margin-top: 1rem; text-align: center;">
+                                    <img src="../assets/images/bai3-advanced.png" alt="Minh chứng Prompt Nâng cao" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--border);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 0;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: linear-gradient(135deg, #111827 0%, #090d16 100%); max-width: 1140px; border-color: rgba(79, 70, 229, 0.3);">
+                    <h2 style="color: var(--primary);">🎯 HỆ THỐNG HÓA NGUYÊN TẮC C.L.E.A.R</h2>
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        Từ kết quả thực nghiệm, tôi đã đúc kết bộ nguyên tắc viết Prompt như một "ngôn ngữ lập trình nhận thức", nhằm thiết lập ranh giới dữ liệu và ép thuật toán Transformer hoạt động theo đúng quỹ đạo:
                     </p>
-                </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🛡️</span>
-                        <h3>Bộ nguyên tắc chiến lược C.L.E.A.R tối ưu hóa hiệu suất</h3>
-                    </div>
-                    <ul class="eco-list" style="font-size: 0.9rem; line-height: 1.6;">
-                        <li><strong>C - Context (Ngữ cảnh & Vai trò):</strong> Thiết lập bối cảnh định hình AI đóng vai trò cụ thể ngay từ đầu lệnh (Persona Imprinting)[cite: 1156, 1179].</li>
-                        <li><strong>L - Length & Format (Độ dài & Định dạng):</strong> Chỉ định biên giới hình thức rõ ràng (bảng biểu, số từ, sơ đồ Markdown)[cite: 1166, 1181].</li>
-                        <li><strong>E - Examples (Ví dụ tham chiếu - Few-shot):</strong> Cung cấp 1-2 biểu mẫu chuẩn làm dữ liệu hướng dẫn quỹ đạo phản hồi mong muốn[cite: 1182, 1183].</li>
-                        <li><strong>A - Audience (Đối tượng mục tiêu):</strong> Khoanh vùng đối tượng tiếp nhận để AI tự động tinh chỉnh văn phong và giọng điệu phù hợp[cite: 1167, 1184, 1185].</li>
-                        <li><strong>R - Restrictions (Ràng buộc logic):</strong> Đưa ra các mệnh lệnh loại trừ nghiêm ngặt nhằm triệt tiêu hoàn toàn hiện tượng ảo giác (hallucination)[cite: 1135, 1186, 1187, 1191].</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🖼️</span>
-                        <h3>Minh chứng thực nghiệm trên hệ thống</h3>
-                    </div>
-                    <div class="product-frame" style="background: var(--bg-dark);">
-                        <img src="../assets/images/bai3-prompt.png" alt="Ảnh chụp thực nghiệm Prompt Engineering Dương Minh Phương" class="product-img">
-                        <div class="spec-tag">EXECUTION_MODEL // GEMINI_3.1_PRO_CORE</div>
-                    </div>
-                </div>
-
-                <div class="ecosystem-box fade-in" style="width: 100%; text-align: center; padding: 2.5rem 2rem;">
-                    <h3 style="color: var(--text-white); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">TÀI LIỆU NGHIÊN CỨU TOÀN VẸN</h3>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Báo cáo chi tiết đầy đủ hệ thống prompt mẫu và kết quả phân tích phản biện đã được lưu trữ an toàn dưới định dạng file PDF.</p>
                     
-                    <a href="../documents/bai3_toi_uu_prompt.pdf" target="_blank" class="btn btn-primary">Xem Toàn Văn Báo Cáo PDF ➔</a>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                            <strong style="color: var(--text-white); font-size: 1.2rem;">C</strong> - Context<br>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Khởi tạo định danh, vai trò và ngữ cảnh chuyên môn.</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                            <strong style="color: var(--text-white); font-size: 1.2rem;">L</strong> - Length/Format<br>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Giới hạn độ dài và định dạng đầu ra (Markdown, Table).</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                            <strong style="color: var(--text-white); font-size: 1.2rem;">E</strong> - Examples<br>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Cung cấp ví dụ tham chiếu (kỹ thuật Few-shot).</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                            <strong style="color: var(--text-white); font-size: 1.2rem;">A</strong> - Audience<br>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Chỉ định rõ đối tượng mục tiêu để điều chỉnh văn phong.</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                            <strong style="color: var(--text-white); font-size: 1.2rem;">R</strong> - Restrictions<br>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Thiết lập ranh giới (Những gì AI tuyệt đối KHÔNG được làm).</span>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
     </main>
 
     <footer class="product-footer">
-        <div class="container footer-content">
-            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học.</p>
-            <p class="serial">MODULE: B3_PROMPT_ENGINEERING // DONE</p>
+        <div class="container footer-content" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <p style="margin: 0;">Copyright © 2026 Dương Minh Phương</p>
+            <p class="serial" style="margin: 0; font-size: 0.8rem; opacity: 0.8;">
+                ⚡ Powered by <span class="gradient-text" style="font-weight: 600;">Google Gemini</span>
+            </p>
         </div>
     </footer>
 

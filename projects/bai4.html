@@ -3,28 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 4 | Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</title>
+    <title>Bài 4: Hợp Tác Trực Tuyến | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS cho phần Giải quyết sự cố */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .challenge-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .challenge-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: #f87171;
+        }
+        .solution-part {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border);
+        }
+        .solution-part::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: #10b981; /* Đổi màu viền xanh cho phần giải pháp */
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .challenge-card:hover::before { background: #10b981; }
+        
+        .c-title { color: #fca5a5; font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;}
+        .s-title { color: #6ee7b7; font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;}
+    </style>
 </head>
 <body>
-
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">DMP // PORTFOLIO_OS</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Giới thiệu</a></li>
                     
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">Các Dự Án ▾</a>
+                        <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
                             <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
                             <li><a href="bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
-                            <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
+                            <li><a href="bai4.html" style="color: var(--accent);">Bài 4: Hợp tác trực tuyến</a></li>
                             <li><a href="bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
                             <li><a href="bai6.html">Bài 6: AI có trách nhiệm</a></li>
                         </ul>
@@ -37,133 +76,123 @@
     </header>
 
     <main class="main-wrapper">
-        <section class="hero-section fade-in" style="padding-bottom: 1.5rem;">
-            <div class="container">
-                <a href="../index.html" class="link-arrow" style="font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">⇠ Quay lại Trang chủ</a>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; line-height: 1.2;">
-                    Bài 4: Công Cụ Hợp Tác Trực Tuyến <br><span class="gradient-text">Trong Dự Án Nhóm</span>
+        <section class="hero-section fade-in" style="padding-bottom: 3rem;">
+            <div class="container text-center" style="text-align: center;">
+                <span class="badge">BÀI TẬP 04 // MỤC 4.4</span>
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
+                    Quản Trị & <span class="gradient-text">Hợp Tác Trực Tuyến</span>
                 </h1>
-                <p class="subtitle">Vận hành không gian số cộng tác giải quyết bài toán quản trị dự án thực tế.</p>
+                <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Vận dụng hệ sinh thái công cụ số để tối ưu hóa quy trình làm việc, quản lý tiến độ và xử lý khủng hoảng thông tin trong dự án "Lập kế hoạch dã ngoại nhóm".</p>
             </div>
         </section>
 
         <section class="features-section">
-            <div class="container" style="max-width: 1000px;">
-                
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                        <span style="font-size: 1.5rem;">🚀</span>
-                        <h3 style="margin-bottom: 0;">Bối cảnh dự án nhóm</h3>
-                    </div>
-                    <p style="font-size: 0.95rem; text-align: justify;">
-                        Trong khuôn khổ học phần, với vai trò là <strong>Trưởng nhóm</strong> điều phối 5 thành viên , tôi đã dẫn dắt dự án thực thi <em>"Lập kế hoạch dã ngoại cuối kỳ"</em>. Chuyến đi đòi hỏi việc thiết kế tối ưu, an toàn và tiết kiệm. Trong bối cảnh làm việc cộng tác trực tuyến, việc đồng bộ và vận hành bộ công cụ số chuyên nghiệp là yếu tố tiên quyết cấu thành nên sự thành công của dự án.
-                    </p>
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>MÔ HÌNH VẬN HÀNH DỰ ÁN</h2>
+                    <p class="subtitle">Với vai trò Trưởng nhóm, tôi đã thiết lập luồng công việc tích hợp 3 trụ cột chính:</p>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🛠️</span>
-                        <h3 style="margin-bottom: 0;">Bộ 4 công cụ số cốt lõi và Phân nhiệm chức năng</h3>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📋</div>
+                        <h3>Điều phối & Tiến độ (Trello)</h3>
+                        <p>Ứng dụng phương pháp <strong>Kanban</strong> để chia nhỏ hạng mục. Mọi công việc được đưa vào các luồng "Cần làm - Đang làm - Đã xong", gán thẻ thành viên và thiết lập Deadline cụ thể, giúp toàn đội minh bạch hóa khối lượng công việc.</p>
                     </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🎧</div>
+                        <h3>Giao tiếp & Đồng bộ (Discord)</h3>
+                        <p>Xóa bỏ tình trạng "trôi tin nhắn" thường gặp ở Zalo/Messenger bằng cách phân luồng server Discord thành các kênh riêng biệt: <em>#thong-bao-chung</em>, <em>#ngan-sach</em>, và kênh đàm thoại Voice để tổ chức các cuộc họp định kỳ.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">☁️</div>
+                        <h3>Cộng tác & Lưu trữ (Google Workspace)</h3>
+                        <p>Sử dụng <strong>Google Drive</strong> làm kho dữ liệu tập trung (Single Source of Truth). Kết hợp <strong>Google Docs/Sheets</strong> để nhiều thành viên có thể soạn thảo kịch bản chương trình và dự trù kinh phí theo thời gian thực (Real-time).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: var(--bg-surface); max-width: 1140px; padding: 2rem;">
                     
-                    <div class="features-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-                        <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border);">
-                            <h4 style="color: var(--accent); margin-bottom: 0.4rem;">📊 Quản lý tiến độ (Trello)</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-gray);">Ứng dụng bảng Kaban trực quan hóa toàn bộ đầu việc của dự án theo luồng trạng thái, thiết lập thời hạn cứng và gán trách nhiệm cụ thể cho từng cá nhân.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border);">
-                            <h4 style="color: var(--accent); margin-bottom: 0.4rem;">💬 Không gian giao tiếp (Discord/Zalo)</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-gray);">Xây dựng hạ tầng tương tác trực tuyến nhanh , họp điều hướng dứt điểm, đôn đốc tiến độ thực thi công việc và giải quyết khủng hoảng thông tin tức thời.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border);">
-                            <h4 style="color: var(--accent); margin-bottom: 0.4rem;">📂 Lưu trữ đám mây (Google Drive)</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-gray);">Thiết lập hệ thống cây thư mục lưu trữ tập trung, phân cấp thư mục khoa học, áp dụng chính sách phân quyền truy cập an toàn bảo mật tài nguyên nhóm.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border);">
-                            <h4 style="color: var(--accent); margin-bottom: 0.4rem;">📝 Soạn thảo cộng tác (Docs/Sheets)</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-gray);">Môi trường đồng chỉnh sửa tài liệu, lên ngân sách tài chính thời gian thực, tham vấn phản biện thông qua cổng comment trực tiếp  và truy vết lịch sử phiên (Version History).</p>
-                        </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem;">
+                        <h2>📸 MINH CHỨNG QUÁ TRÌNH PHỐI HỢP</h2>
+                        <a href="../documents/Bài tập 4.3.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">📄 Xem Full Báo Cáo Cá Nhân</a>
                     </div>
-                </div>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">⚖️</span>
-                        <h3 style="margin-bottom: 0;">Ma trận phân tích thách thức và giải pháp vận hành tối ưu</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div class="product-frame" style="background: var(--bg-dark);">
+                            <img src="../assets/images/bai4-trello.png" alt="Bảng Kanban Trello" class="product-img" style="border-radius: 6px; border: 1px solid var(--border);">
+                            <div style="text-align: center; margin-top: 0.8rem; color: var(--text-gray); font-size: 0.85rem;">
+                                <em>Minh chứng 1: Bảng Kanban trên Trello theo dõi tiến độ tổng thể.</em>
+                            </div>
+                        </div>
+
+                        <div class="product-frame" style="background: var(--bg-dark);">
+                            <img src="../assets/images/bai4-docs.png" alt="Cộng tác trên Google Docs" class="product-img" style="border-radius: 6px; border: 1px solid var(--border);">
+                            <div style="text-align: center; margin-top: 0.8rem; color: var(--text-gray); font-size: 0.85rem;">
+                                <em>Minh chứng 2: Soạn thảo cộng tác và giải quyết bình luận trên Google Docs.</em>
+                            </div>
+                        </div>
                     </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 0;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: linear-gradient(135deg, #111827 0%, #090d16 100%); max-width: 1140px; border-color: rgba(16, 185, 129, 0.3);">
+                    <h2 style="color: var(--text-white);">🛠️ PHÂN TÍCH & XỬ LÝ SỰ CỐ</h2>
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.95rem;">Làm việc nhóm trực tuyến luôn tiềm ẩn rủi ro về giao tiếp và đồng bộ dữ liệu. Dưới đây là các "khủng hoảng vi mô" đã phát sinh và cách tôi cùng nhóm xử lý triệt để:</p>
                     
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; color: var(--text-gray);">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent); background: rgba(255,255,255,0.02);">
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 35%;">Thách thức thực tế gặp phải</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 65%;">Giải pháp kỹ thuật thực hiện cải tiến hiệu suất</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;">
-                                        <strong>Xung đột ý kiến về ngân sách:</strong><br>
-                                        <span style="font-size:0.8rem; color:var(--text-gray);">Nhiều thành viên chỉnh sửa bảng tính cùng lúc gây nhầm lẫn dữ liệu.</span>
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Sử dụng tính năng <span style="color:var(--accent);">"Protect Sheets"</span> để khóa các vùng dữ liệu cố định trên Google Sheets và theo dõi chặt chẽ <span style="color:var(--accent);">"Version History"</span> nhằm khôi phục nhanh các bản ghi cũ khi xảy ra sai sót.
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;">
-                                        <strong>Trôi thông tin quan trọng:</strong><br>
-                                        <span style="font-size:0.8rem; color:var(--text-gray);">Thông tin chốt về thời gian, địa điểm tập kết bị trôi nhanh trong dòng chat tổng của Discord.</span>
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Ứng dụng triệt để tính năng <span style="color:var(--accent);">"Pin message"</span> cố định các quyết định cốt lõi và khởi tạo kênh riêng biệt <code>#thong-bao-chung</code> chỉ dùng để cập nhật quyết định cuối cùng từ nhóm trưởng.
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;">
-                                        <strong>Thành viên quên deadline:</strong><br>
-                                        <span style="font-size:0.8rem; color:var(--text-gray);">Một số nhiệm vụ phụ mua đồ dã ngoại bị chậm trễ do thành viên không chủ động check Trello.</span>
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Triển khai cấu hình tự động hóa: **Tích hợp Trello với Slack/Discord** để đẩy hệ thống thông báo nhắc nhở tự động (Webhook) trước 24h khi đến hạn nộp bài.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="challenge-grid">
+                        
+                        <div class="challenge-card">
+                            <div class="c-title">⚠️ Xung đột dữ liệu ngân sách</div>
+                            <p style="font-size: 0.85rem; color: var(--text-gray);">Nhiều thành viên chỉnh sửa bảng tính Google Sheets cùng lúc gây ghi đè, nhầm lẫn số liệu thu chi.</p>
+                            
+                            <div class="solution-part">
+                                <div class="s-title">💡 Giải pháp can thiệp</div>
+                                <p style="font-size: 0.85rem; color: var(--text-white);">Kích hoạt tính năng <strong>"Protect Sheets"</strong> để phân quyền sửa từng vùng dữ liệu. Ứng dụng <strong>"Version History"</strong> để khôi phục nhanh các bản ghi cũ bị lỗi.</p>
+                            </div>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="c-title">⚠️ Trôi thông tin quan trọng</div>
+                            <p style="font-size: 0.85rem; color: var(--text-gray);">Các quyết định chốt về thời gian, địa điểm tập kết bị trôi tuột trong các cuộc thảo luận dài trên kênh chat.</p>
+                            
+                            <div class="solution-part">
+                                <div class="s-title">💡 Giải pháp can thiệp</div>
+                                <p style="font-size: 0.85rem; color: var(--text-white);">Kỷ luật hóa luồng thông tin: Sử dụng lệnh <strong>"Pin message"</strong> cho các quyết định cuối cùng, và tạo kênh chuyên biệt <em>#thong-bao-chung</em> (chỉ admin được chat) để phổ biến.</p>
+                            </div>
+                        </div>
+
+                        <div class="challenge-card">
+                            <div class="c-title">⚠️ Trễ hạn (Miss Deadline)</div>
+                            <p style="font-size: 0.85rem; color: var(--text-gray);">Một số nhiệm vụ hậu cần phụ (mua đồ ăn vặt, thuê bạt) bị chậm do thành viên lười mở Trello kiểm tra.</p>
+                            
+                            <div class="solution-part">
+                                <div class="s-title">💡 Giải pháp can thiệp</div>
+                                <p style="font-size: 0.85rem; color: var(--text-white);">Sử dụng Automations: <strong>Tích hợp bot Trello trực tiếp vào Discord</strong> để tự động đẩy thông báo nhắc nhở (ping tag tên) trước 24h khi một task sắp đến hạn nộp.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🖼️</span>
-                        <h3>Hệ thống không gian lưu trữ và Soạn thảo cộng tác</h3>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Giao diện quản lý cấu trúc cây thư mục tập trung và nhật ký cộng tác soạn thảo kế hoạch của nhóm trên không gian đám mây:</p>
-                    
-                    <div class="product-frame" style="background: var(--bg-dark);">
-                        <img src="../assets/images/bai4-collab.png" alt="Minh chứng hợp tác nhóm trực tuyến Dương Minh Phương" class="product-img">
-                        <div class="spec-tag">WORKSPACE_OS // GOOGLE_DRIVE_SHARED_DIRECTORY</div>
-                    </div>
-                </div>
-
-                <div class="ecosystem-box fade-in" style="width: 100%; text-align: center; padding: 2.5rem 2rem;">
-                    <h3 style="color: var(--text-white); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">HỆ THỐNG TÀI NGUYÊN DỰ ÁN GỐC</h3>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 550px; margin-left: auto; margin-right: auto;">Truy cập trực tiếp không gian lưu trữ đám mây của dự án hoặc xem toàn văn báo cáo phân tích hiệu quả vận hành dưới dạng file PDF.</p>
-                    
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://drive.google.com/drive/folders/1tFVUctSe9MHbOEXB_dNZm-l0zKtLxU2q?usp=drive_link" target="_blank" class="btn btn-secondary">Mở Thư Mục Google Drive Nhóm ↗</a>
-                        <a href="../documents/bai4_hop_tac_nhom.pdf" target="_blank" class="btn btn-primary">Xem Báo Cáo Kỹ Thuật PDF ➔</a>
-                    </div>
-                </div>
-
             </div>
         </section>
     </main>
 
     <footer class="product-footer">
-        <div class="container footer-content">
-            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học.</p>
-            <p class="serial">MODULE: B4_ONLINE_COLLABORATION // DONE</p>
+        <div class="container footer-content" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <p style="margin: 0;">Copyright © 2026 Dương Minh Phương</p>
+            <p class="serial" style="margin: 0; font-size: 0.8rem; opacity: 0.8;">
+                ⚡ Powered by <span class="gradient-text" style="font-weight: 600;">Google Gemini</span>
+            </p>
         </div>
     </footer>
 

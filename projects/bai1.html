@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 1 | Thao tác tệp tin và thư mục</title>
+    <title>Bài 1: Thao Tác Tệp Tin | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">DMP // PORTFOLIO_OS</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Giới thiệu</a></li>
                     
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">Các Dự Án ▾</a>
+                        <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
+                            <li><a href="bai1.html" style="color: var(--accent);">Bài 1: Thao tác tệp tin</a></li>
                             <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
                             <li><a href="bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
                             <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
@@ -37,108 +35,79 @@
     </header>
 
     <main class="main-wrapper">
-        <section class="hero-section fade-in" style="padding-bottom: 1.5rem;">
-            <div class="container">
-                <a href="../index.html" class="link-arrow" style="font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">⇠ Quay lại Trang chủ</a>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; line-height: 1.2;">
-                    Bài 1: Thao Tác Cơ Bản Với <br><span class="gradient-text">Tệp Tin Và Thư Mục</span>
+        <section class="hero-section fade-in" style="padding-bottom: 3rem;">
+            <div class="container text-center" style="text-align: center;">
+                <span class="badge">BÀI TẬP 01 // MỤC 1.4</span>
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
+                    Quản trị Cấu trúc <span class="gradient-text">Dữ liệu Cục bộ</span>
                 </h1>
-                <p class="subtitle">Nội dung thực hành chuẩn hóa kỹ năng quản trị tài nguyên số cá nhân[cite: 4].</p>
+                <p class="subtitle" style="max-width: 700px; margin: 0 auto;">Thiết lập tư duy quản lý tệp tin không gian số: Xây dựng cấu trúc thư mục tối ưu và định hình quy tắc đặt tên chuẩn mực dành riêng cho kỹ sư.</p>
             </div>
         </section>
 
         <section class="features-section">
-            <div class="container" style="max-width: 900px;">
-                
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                        <span style="font-size: 1.5rem;">🎯</span>
-                        <h3 style="margin-bottom: 0;">Mục tiêu bài tập</h3>
-                    </div>
-                    <p>Làm chủ các thao tác nền tảng trên hệ điều hành, tối ưu hóa cấu trúc quản lý thư mục hình cây và thiết lập quy tắc đặt tên tệp logic[cite: 31, 108]. Đây là kỹ năng cốt lõi giúp tổ chức tài liệu học thuật khoa học, chuẩn bị cho các dự án nghiên cứu chuyên sâu của ngành Mechatronics.</p>
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>NGUYÊN TẮC QUẢN LÝ DỮ LIỆU</h2>
+                    <p class="subtitle">Hệ thống hóa không gian lưu trữ cá nhân</p>
                 </div>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📂</div>
+                        <h3>Cấu trúc Thư mục Tối ưu</h3>
+                        <p>Thay vì lưu trữ dàn trải, dữ liệu được phân nhánh theo tư duy cây thư mục (Hierarchical Structure). Thư mục gốc đại diện cho dự án tổng (<strong>ThucHanh_DuongMinhPhuong</strong>), các tài liệu con được phân tách theo luồng công việc (VD: sub-folder <strong>TaiLieu</strong>). Điều này giúp rút ngắn thời gian truy xuất dữ liệu khi các dự án Cơ điện tử ngày càng phình to với hàng ngàn file code và bản vẽ.</p>
+                    </div>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">⚙️</span>
-                        <h3 style="margin-bottom: 0;">Nhật ký quy trình thực hiện (12 Thao tác cốt lõi)</h3>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🏷️</div>
+                        <h3>Quy tắc Đặt tên Tệp (Naming Convention)</h3>
+                        <p>Áp dụng quy tắc tiêu chuẩn hóa: <strong>Không sử dụng khoảng trắng, không dấu Tiếng Việt</strong> (tránh lỗi mã hóa khi upload lên server hoặc đọc bằng code Python/C++). Sử dụng Snake_case hoặc PascalCase. Ví dụ: Từ một file nháp <em>"GhiChu"</em> đã được chuẩn hóa và đổi tên thành <em>"GhiChuQuanTrong.txt"</em>, hay <em>"DiChuyen.txt"</em> để biểu đạt rõ ràng mục đích của file.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: var(--bg-surface); max-width: 1140px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem;">
+                        <h2>⚙️ QUÁ TRÌNH THỰC HIỆN & MINH CHỨNG</h2>
+                        <a href="../documents/Bài tập 1.1.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">📄 Mở file PDF Minh chứng</a>
                     </div>
                     
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; color: var(--text-gray);">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent);">
-                                    <th style="padding: 0.75rem 0.5rem; font-weight: 600;">Giai đoạn</th>
-                                    <th style="padding: 0.75rem 0.5rem; font-weight: 600;">Các bước thao tác chi tiết trong hệ thống</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top; width: 180px;">Khởi tạo hệ thống</td>
-                                    <td style="padding: 1rem 0.5rem;">
-                                        <ul style="list-style-type: '⚡ '; padding-left: 1rem; line-height: 1.7;">
-                                            <li><strong>Bước 1:</strong> Kích hoạt trình quản lý File Explorer bằng tổ hợp phím <kbd style="background:#222; padding:2px 4px; border-radius:4px; border:1px solid #444;">Win + E</kbd>[cite: 5].</li>
-                                            <li><strong>Bước 2:</strong> Điều hướng truy cập vào phân vùng ổ đĩa dữ liệu không chứa hệ điều hành (Ổ đĩa D:)[cite: 7].</li>
-                                            <li><strong>Bước 3:</strong> Tạo thư mục gốc với cú pháp định danh: <code>ThucHanh_DuongMinhPhuong</code>[cite: 31, 110].</li>
-                                            <li><strong>Bước 4:</strong> Truy cập trực tiếp vào không gian làm việc của thư mục vừa tạo[cite: 56].</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Quản trị dữ liệu</td>
-                                    <td style="padding: 1rem 0.5rem;">
-                                        <ul style="list-style-type: '⚡ '; padding-left: 1rem; line-height: 1.7;">
-                                            <li><strong>Bước 5:</strong> Khởi tạo tệp văn bản sơ cấp ban đầu đặt tên là <code>GhiChu.txt</code>[cite: 59, 60].</li>
-                                            <li><strong>Bước 6:</strong> Đổi tên tệp (Rename) thành <code>GhiChuQuanTrong.txt</code> để phân loại mức độ bảo mật[cite: 81].</li>
-                                            <li><strong>Bước 7:</strong> Thiết lập cấu trúc nhánh bằng cách tạo thêm một thư mục con tên là <code>TaiLieu</code>[cite: 108, 109].</li>
-                                            <li><strong>Bước 8:</strong> Thực hiện sao chép tệp tin (Copy & Paste) đưa bản sao vào thư mục <code>TaiLieu</code>[cite: 124, 126].</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Tối ưu & Khôi phục</td>
-                                    <td style="padding: 1rem 0.5rem;">
-                                        <ul style="list-style-type: '⚡ '; padding-left: 1rem; line-height: 1.7;">
-                                            <li><strong>Bước 9:</strong> Khởi tạo file <code>DiChuyen.txt</code>, thực hiện lệnh Cut & Paste dịch chuyển hẳn file vào thư mục đích[cite: 151, 152, 198, 199].</li>
-                                            <li><strong>Bước 10:</strong> Thực hiện xóa tệp (Delete) đưa dữ liệu tạm thời vào hệ thống Thùng rác (Recycle Bin)[cite: 243, 244].</li>
-                                            <li><strong>Bước 11:</strong> Thao tác xóa vĩnh viễn tệp dữ liệu bằng tổ hợp phím nâng cao <kbd style="background:#222; padding:2px 4px; border-radius:4px; border:1px solid #444;">Shift + Delete</kbd>[cite: 276].</li>
-                                            <li><strong>Bước 12:</strong> Truy cập Recycle Bin, thực hiện lệnh Restore khôi phục tệp về trạng thái an toàn ban đầu[cite: 294, 295].</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                        
+                        <div>
+                            <p class="accent-text" style="color: var(--text-gray); margin-bottom: 1rem;">Dựa trên yêu cầu bài thực hành, tôi đã hoàn thiện chu trình 12 thao tác cơ bản bao gồm:</p>
+                            <ul class="eco-list">
+                                <li style="text-align: justify;"><strong>Khởi tạo & Định danh:</strong> Truy cập phân vùng ổ đĩa an toàn (không dùng ổ C hệ thống). Tạo thư mục gốc <em>ThucHanh_DuongMinhPhuong</em> và khởi tạo các file văn bản nháp.</li>
+                                <li style="text-align: justify;"><strong>Cấu trúc lại dữ liệu:</strong> Tạo thư mục con <em>TaiLieu</em>, đổi tên file thành <em>GhiChuQuanTrong.txt</em> để dễ nhận diện.</li>
+                                <li style="text-align: justify;"><strong>Điều phối Dữ liệu:</strong> Thực hiện các lệnh sao chép (Copy/Paste) tạo bản sao dự phòng, và lệnh cắt (Cut/Paste) để phân luồng file <em>DiChuyen.txt</em> về đúng thư mục đích.</li>
+                                <li style="text-align: justify;"><strong>Quản trị rủi ro & Vòng đời file:</strong> Thực hành quy trình xóa mềm (đưa vào Recycle Bin), khôi phục dữ liệu (Restore) khi thao tác lỗi, và dọn dẹp bộ nhớ với lệnh xóa vĩnh viễn (Shift + Delete).</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-frame" style="padding: 0.5rem; background: var(--bg-dark);">
+                            <img src="../assets/images/bai1-minhchung.png" alt="Ảnh chụp minh họa thư mục" class="product-img" style="border-radius: 6px; border: 1px solid var(--border);">
+                            <div style="text-align: center; margin-top: 1rem; color: var(--text-gray); font-size: 0.85rem;">
+                                <em>Minh chứng: Hình ảnh chụp không gian làm việc thực tế với cấu trúc phân tầng.</em>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🖼️</span>
-                        <h3>Giao diện minh chứng kết quả thực hành</h3>
-                    </div>
-                    <p style="margin-bottom: 1rem;">Ảnh chụp màn hình thực tế cấu trúc phân cấp cây thư mục và quy trình tạo tệp tin trong hệ thống File Explorer[cite: 108, 118]:</p>
-                    
-                    <div class="product-frame" style="background: var(--bg-dark);">
-                        <img src="../assets/images/bai1-folder.png" alt="Minh chứng cấu trúc thư mục Dương Minh Phương" class="product-img">
-                        <div class="spec-tag">LOCAL_HOST // DATA_STRUCTURE_SUCCESSFUL</div>
-                    </div>
-                </div>
-
-                <div class="ecosystem-box fade-in" style="width: 100%; text-align: center; padding: 2.5rem 2rem;">
-                    <h3 style="color: var(--text-white); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">HỒ SƠ TÀI LIỆU MINH CHỨNG GỐC</h3>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Để phục vụ công tác lưu trữ hồ sơ và thẩm định điểm số từ giảng viên, báo cáo PDF toàn vẹn đã được tích hợp sẵn dưới đây.</p>
-                    
-                    <a href="../documents/bai1_cau_truc_thu_muc.pdf" target="_blank" class="btn btn-primary">Xem Báo Cáo Thực Hành PDF ➔</a>
-                </div>
-
             </div>
         </section>
     </main>
 
     <footer class="product-footer">
-        <div class="container footer-content">
-            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học.</p>
-            <p class="serial">MODULE: B1_FILE_MANAGEMENT // DONE</p>
+        <div class="container footer-content" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <p style="margin: 0;">Copyright © 2026 Dương Minh Phương</p>
+            <p class="serial" style="margin: 0; font-size: 0.8rem; opacity: 0.8;">
+                ⚡ Powered by <span class="gradient-text" style="font-weight: 600;">Google Gemini</span>
+            </p>
         </div>
     </footer>
 

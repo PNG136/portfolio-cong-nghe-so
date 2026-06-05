@@ -3,26 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 2 | Tìm kiếm và đánh giá thông tin học thuật</title>
+    <title>Bài 2: Tìm Kiếm Học Thuật | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS bổ sung cho Bảng Đánh Giá */
+        .academic-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-white);
+        }
+        .academic-table th, .academic-table td {
+            border: 1px solid var(--border);
+            padding: 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        .academic-table th {
+            background-color: rgba(6, 182, 212, 0.1);
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .academic-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        .highlight-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(79, 70, 229, 0.2);
+            color: #818cf8;
+            font-size: 0.75rem;
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 <body>
-
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">DMP // PORTFOLIO_OS</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Giới thiệu</a></li>
                     
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">Các Dự Án ▾</a>
+                        <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
-                            <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
+                            <li><a href="bai2.html" style="color: var(--accent);">Bài 2: Tìm kiếm học thuật</a></li>
                             <li><a href="bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
                             <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
                             <li><a href="bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
@@ -37,176 +68,128 @@
     </header>
 
     <main class="main-wrapper">
-        <section class="hero-section fade-in" style="padding-bottom: 1.5rem;">
-            <div class="container">
-                <a href="../index.html" class="link-arrow" style="font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">⇠ Quay lại Trang chủ</a>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; line-height: 1.2;">
-                    Bài 2: Tìm Kiếm Và Đánh Giá <br><span class="gradient-text">Thông Tin Học Thuật</span>
+        <section class="hero-section fade-in" style="padding-bottom: 3rem;">
+            <div class="container text-center" style="text-align: center;">
+                <span class="badge">BÀI TẬP 02 // MỤC 2.4</span>
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
+                    Nghiên Cứu & Đánh Giá <span class="gradient-text">Nguồn Tin Học Thuật</span>
                 </h1>
-                <p class="subtitle">Thẩm định hệ sinh thái tài liệu về chip quang tử trong hệ thống cơ điện tử[cite: 341].</p>
+                <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Chủ đề nghiên cứu: <strong>"Tương lai của điều khiển tự động: Tiềm năng ứng dụng của chip quang học (PICs) trong xử lý tín hiệu hệ thống cơ điện tử phức tạp"</strong>.</p>
             </div>
         </section>
 
         <section class="features-section">
-            <div class="container" style="max-width: 1000px;">
-                
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                        <span style="font-size: 1.5rem;">📝</span>
-                        <h3 style="margin-bottom: 0;">Chủ đề nghiên cứu & Đặt vấn đề</h3>
-                    </div>
-                    <p style="margin-bottom: 0.8rem; font-weight: 600; color: var(--accent);">
-                        "Tương lai của điều khiển tự động: Tiềm năng ứng dụng của chip quang học trong xử lý tín hiệu hệ thống cơ điện tử phức tạp"[cite: 341].
-                    </p>
-                    <p style="font-size: 0.9rem; text-align: justify;">
-                        Khi các hệ thống tự động hóa chạm giới hạn vật lý của vi mạch silicon truyền thống (về tốc độ xung nhịp, độ trễ và tản nhiệt), chip quang học (PICs) nổi lên như một giải pháp đột phá thay thế electron bằng hạt photon[cite: 336, 337, 339]. Bài báo cáo tập trung sàng lọc, đối chiếu chéo các tài liệu từ 2024 đến 2026 để đánh giá tiềm năng thực tiễn của phần cứng quang tử này[cite: 342, 347].
-                    </p>
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>CHIẾN LƯỢC TÌM KIẾM DỮ LIỆU</h2>
+                    <p class="subtitle">Ứng dụng toán tử nâng cao để khoanh vùng tài liệu từ 2024-2026</p>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem;">
-                        <span style="font-size: 1.5rem;">🛠️</span>
-                        <h3 style="margin-bottom: 0;">Chiến lược & Từ khóa học thuật</h3>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Toán tử & Từ khóa Cốt lõi</h3>
+                        <p>Sử dụng kết hợp các toán tử Boolean để tối ưu kết quả truy xuất: <br><br>
+                        <code style="color: var(--accent);">"photonic integrated circuits" AND ("mechatronics" OR "automation control")</code> <br>
+                        <code style="color: var(--accent);">"silicon photonics" AND "signal processing"</code></p>
                     </div>
-                    <ul style="list-style-type: '⚡ '; padding-left: 1rem; line-height: 1.7; font-size: 0.9rem;">
-                        <li><strong>Cơ sở dữ liệu khai thác:</strong> IEEE Xplore, Optica Publishing Group, SPIE, AIP Publishing, MDPI và Viện IMEC[cite: 342, 350].</li>
-                        <li><strong>Từ khóa cốt lõi (Keywords):</strong> <code>"photonic integrated circuits"</code>, <code>"silicon photonics"</code>, <code>"mechatronics control systems"</code>, <code>"signal processing automation"</code>[cite: 346].</li>
-                        <li><strong>Phạm vi dữ liệu:</strong> Bao quát 4 loại nguồn chính (CSDL học thuật, tạp chí chuyên ngành, sách chuyên khảo, nguồn mở internet) có bình duyệt (peer-reviewed)[cite: 345, 347].</li>
-                    </ul>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🏛️</div>
+                        <h3>Cơ sở Dữ liệu Mục tiêu</h3>
+                        <p>Quá trình thu thập được giới hạn nghiêm ngặt tại các nền tảng học thuật uy tín nhất trong giới kỹ thuật, bao gồm: <strong>IEEE Xplore, ACS Photonics, nền tảng của Optica, SPIE</strong>, và cổng thông tin mở của viện nghiên cứu <strong>IMEC</strong>.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>Tiêu chí Sàng lọc Khắt khe</h3>
+                        <p>Tập trung vào các bài báo khoa học đã qua bình duyệt độc lập (Peer-reviewed) và giới hạn phạm vi thời gian xuất bản từ <strong>2024 - 2026</strong> nhằm bắt kịp tốc độ phát triển đột phá của phần cứng quang tử hiện nay.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">📊</span>
-                        <h3 style="margin-bottom: 0;">Bảng tổng hợp phân tích độ tin cậy tài liệu học thuật</h3>
-                    </div>
+        <section class="ecosystem-section fade-in" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: var(--bg-surface); max-width: 1140px; padding: 2rem;">
                     
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                        <h2>📊 TRÍCH XUẤT BẢNG ĐÁNH GIÁ TÀI LIỆU (TIÊU BIỂU)</h2>
+                        <a href="../documents/Bài tập 2.2.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">📄 Xem File PDF (Full 10 Tài Liệu)</a>
+                    </div>
+
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 1rem;">Dưới đây là phân tích trích xuất 3 nguồn tài liệu đại diện cho 3 phân khúc (Thực nghiệm hàn lâm, Lý thuyết mô phỏng, Báo cáo kỹ thuật biên) trong tổng số 10 tài liệu đã nghiên cứu:</p>
+
                     <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; color: var(--text-gray);">
+                        <table class="academic-table">
                             <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent); background: rgba(255,255,255,0.02);">
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 5%;">STT</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 25%;">Tên tài liệu gốc (Rút gọn) [cite: 350]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 15%;">Loại nguồn [cite: 350]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 25%;">Đánh giá Tác giả & Phương pháp [cite: 350]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 25%;">Ưu điểm & Nhược điểm kỹ thuật [cite: 350]</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 5%; text-align: center;">Điểm</th>
+                                <tr>
+                                    <th style="width: 25%;">Tên tài liệu & Nguồn</th>
+                                    <th style="width: 20%;">Mức độ Uy tín</th>
+                                    <th style="width: 25%;">Phương pháp & Trích dẫn</th>
+                                    <th style="width: 20%;">Ưu/Nhược điểm cốt lõi</th>
+                                    <th style="width: 10%; text-align: center;">Đánh giá</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">1</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Perez, M. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">IEEE Xplore</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Thư viện hàng đầu. Phương pháp thực nghiệm đo lường thời gian thực.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Giải pháp phần cứng thực tế. Yêu cầu kiến thức vi mạch sâu.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">5/5</td>
+                                <tr>
+                                    <td>
+                                        <span class="highlight-tag">IEEE Xplore (2025)</span><br>
+                                        <strong>Perez, M. et al.</strong> 'Electronic-photonic platforms for the control of programmable Silicon Photonic chips'
+                                    </td>
+                                    <td><strong>Rất uy tín (Top Tier):</strong> IEEE Xplore là thư viện hàng đầu thế giới về kỹ thuật điện - điện tử.</td>
+                                    <td><strong>Thực nghiệm:</strong> Đo lường chính xác độ trễ điều khiển thời gian thực trên chip lai (Analog/Digital).</td>
+                                    <td><strong>Ưu:</strong> Đưa ra giải pháp phần cứng thực tế.<br><br><strong>Nhược:</strong> Yêu cầu kiến thức vi mạch cực kỳ sâu.</td>
+                                    <td style="text-align: center; font-weight: 700; color: #4ade80;">5/5</td>
                                 </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">2</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Nguyen, T. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">MDPI Applied Sci.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Chỉ số ảnh hưởng (IF) cao. Phương pháp tổng quan hệ thống.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Bao quát IoT ở biên. Tính đặc thù cơ điện tử chưa cao.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">4.5/5</td>
+                                <tr>
+                                    <td>
+                                        <span class="highlight-tag">ACS Photonics (2024)</span><br>
+                                        <strong>Wang, Y. et al.</strong> 'Integrated Photonic Neural Networks: Opportunities and Challenges'
+                                    </td>
+                                    <td><strong>Rất uy tín (Q1):</strong> ACS Photonics thuộc Hiệp hội Hóa học Mỹ.</td>
+                                    <td><strong>Mô phỏng toán học:</strong> Mô phỏng mạng nơ-ron quang học. Mức trích dẫn tốt (>20).</td>
+                                    <td><strong>Ưu:</strong> Nêu bật ứng dụng AI phần cứng đột phá.<br><br><strong>Nhược:</strong> Mới chỉ dừng ở giai đoạn nguyên mẫu.</td>
+                                    <td style="text-align: center; font-weight: 700; color: #4ade80;">5/5</td>
                                 </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">3</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Zhang, L. et al. (2024)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Opto-Electronic</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Tạp chí ngành lõi uy tín. Thử nghiệm xử lý tín hiệu lai (Trích dẫn >20).</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Giải quyết trực tiếp xử lý tín hiệu. Mô hình toán học phức tạp.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">5/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">4</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Wang, Y. et al. (2024)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">ACS Photonics</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Tạp chí Top Q1 danh giá. Phương pháp lý thuyết & mô phỏng.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Ứng dụng AI mạng nơ-ron quang đột phá. Mới ở dạng nguyên mẫu.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">5/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">5</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Poon, J. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Optica (CLEO)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Kỷ yếu hội nghị uy tín hàng đầu. Mô phỏng AI thiết kế mạch.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Cập nhật xu hướng tự động hóa EDA. Chỉ tập trung khâu thiết kế mạch.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">4.5/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">6</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Weninger, D. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Optica OPN</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Chuyên trang phân tích xu hướng. Phân tích Case-study công nghiệp.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Góc nhìn vĩ mô về quy mô nhà máy AI. Ít đi sâu vào kỹ thuật lõi.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">4/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">7</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Smith, A. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">AIP Publishing</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Viện Vật lý Hoa Kỳ bảo chứng. Phương pháp thử nghiệm thống kê.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Số liệu thực nghiệm rõ ràng. Giới hạn trên cấu trúc cơ bản.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">4.5/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">8</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Zhou, H. et al. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Sách chuyên khảo</td>
-                                    <td style="padding: 0.8rem 0.5rem;">NXB SPIE hàng đầu quang học. Phương pháp lý thuyết hệ thống thiết kế nghịch đảo.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Nền tảng lý thuyết vững chắc. Tính ứng dụng cần thêm thời gian.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">5/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">9</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Viện IMEC (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Nguồn mở Internet</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Trung tâm vi điện tử hàng đầu Châu Âu. Báo cáo kỹ thuật thực nghiệm.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Công bố đột phá vi ba đơn chip thực tế nhất. Chưa qua bình duyệt độc lập.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">4/5</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center;">10</td>
-                                    <td style="padding: 0.8rem 0.5rem; color: var(--text-white); font-weight: 500;">Shepard, J. (2025)</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Nguồn mở Internet</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Cổng thông tin chuyên kỹ sư điện. Phân tích dữ liệu tổng hợp thực tiễn.</td>
-                                    <td style="padding: 0.8rem 0.5rem;">Giao diện thông tin dễ hiểu, trực quan. Độ sâu học thuật không cao bằng Q1.</td>
-                                    <td style="padding: 0.8rem 0.5rem; text-align: center; color: var(--accent); font-weight: bold;">3.5/5</td>
+                                <tr>
+                                    <td>
+                                        <span class="highlight-tag">IMEC Tech Report (2025)</span><br>
+                                        <strong>Imec</strong> 'Fully-integrated, single-chip microwave photonics system'
+                                    </td>
+                                    <td><strong>Đáng tin cậy:</strong> Nguồn mở từ viện nghiên cứu vi điện tử hàng đầu Châu Âu (IMEC).</td>
+                                    <td><strong>Báo cáo kỹ thuật:</strong> Cập nhật tiến độ thử nghiệm và khả năng thương mại hóa thực tế.</td>
+                                    <td><strong>Ưu:</strong> Công bố đột phá, tính thực tiễn cao nhất.<br><br><strong>Nhược:</strong> Chưa qua bình duyệt độc lập (Peer-review).</td>
+                                    <td style="text-align: center; font-weight: 700; color: #fbbf24;">4/5</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem;">
-                        <span style="font-size: 1.5rem;">🔍</span>
-                        <h3>Đánh giá chuyên sâu & Đối chiếu chéo</h3>
-                    </div>
-                    <p style="font-size: 0.9rem; text-align: justify; margin-bottom: 0.8rem;">
-                        Nghiên cứu cho thấy sự phân tầng rõ rệt: Các tài liệu học thuật lõi (IEEE, ACS, SPIE) cung cấp nền tảng toán học, mô phỏng cấp cao làm bằng chứng xác đáng cho việc tối ưu băng thông phần cứng phòng thí nghiệm[cite: 351, 352, 353, 354]. Trong khi đó, các nguồn mở thực tế như báo cáo kỹ thuật của viện IMEC (2025) lại là minh chứng sống động khẳng định lý thuyết vi ba quang tử đơn chip đang bước vào giai đoạn thương mại hóa[cite: 355, 356, 361].
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 0;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: linear-gradient(135deg, #111827 0%, #090d16 100%); max-width: 1140px; border-color: rgba(6, 182, 212, 0.3);">
+                    <h2 style="color: var(--accent);">💡 TỔNG HỢP & NHẬN ĐỊNH CÁ NHÂN</h2>
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.95rem; text-align: justify; margin-bottom: 1rem;">
+                        Quá trình rà soát và đánh giá chéo 10 nguồn tài liệu cho thấy một hệ sinh thái thông tin bổ trợ rất tốt: Các nguồn hàn lâm chuẩn Q1 (IEEE, ACS, SPIE) chịu trách nhiệm xây dựng nền tảng toán học và giới hạn vật lý. Trong khi đó, các báo cáo mở từ các viện ứng dụng (IMEC) mang đến bức tranh thực tiễn về giai đoạn tiền thương mại hóa.
                     </p>
-                    <p style="font-size: 0.9rem; text-align: justify;">
-                        Sự kết hợp đa chiều giữa các nguồn tài liệu được bình duyệt khắt khe và các công bố công nghệ thực tiễn giúp xác thực thông tin toàn diện, loại bỏ luồng thông tin không chính thống, thiết lập nền tảng tri thức tin cậy cho chuyên ngành Cơ điện tử[cite: 357, 362, 363].
+                    <p class="accent-text" style="color: var(--text-white); font-size: 0.95rem; text-align: justify; margin-bottom: 0; border-left: 3px solid var(--primary); padding-left: 1rem;">
+                        <strong>Nhận định:</strong> Chip quang học (PICs) không còn là lý thuyết viễn vông. Kỹ năng tổng hợp đa chiều này đã chứng minh rằng để theo đuổi ngành Cơ điện tử thế hệ mới, kỹ sư không chỉ cần hiểu cơ khí/lập trình, mà phải liên tục thẩm định và cập nhật các luồng công nghệ lõi (phần cứng vật lý) từ các nguồn tin xác tín nhất.
                     </p>
                 </div>
-
-                <div class="ecosystem-box fade-in" style="width: 100%; text-align: center; padding: 2.5rem 2rem;">
-                    <h3 style="color: var(--text-white); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">TÀI LIỆU MINH CHỨNG TOÀN VẸN</h3>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Báo cáo chi tiết đầy đủ danh mục trích dẫn chuẩn hóa học thuật đã được đóng gói thành file PDF lưu trữ trong thư mục hệ thống dưới đây[cite: 363].</p>
-                    
-                    <a href="../documents/bai2_danh_gia_nguon_tin.pdf" target="_blank" class="btn btn-primary">Xem Toàn Văn Báo Cáo PDF ➔</a>
-                </div>
-
             </div>
         </section>
     </main>
 
     <footer class="product-footer">
-        <div class="container footer-content">
-            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học[cite: 328].</p>
-            <p class="serial">MODULE: B2_ACADEMIC_SEARCH // DONE</p>
+        <div class="container footer-content" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <p style="margin: 0;">Copyright © 2026 Dương Minh Phương</p>
+            <p class="serial" style="margin: 0; font-size: 0.8rem; opacity: 0.8;">
+                ⚡ Powered by <span class="gradient-text" style="font-weight: 600;">Google Gemini</span>
+            </p>
         </div>
     </footer>
 

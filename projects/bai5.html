@@ -3,29 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 5 | Hỗ trợ sáng tạo nội dung số bằng AI tạo sinh</title>
+    <title>Bài 5: AI Sáng Tạo Nội Dung | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tùy chỉnh riêng cho layout hiển thị Infographic */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .ethics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .ethics-card {
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #10b981;
+        }
+        .ethics-title {
+            color: #34d399;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .ethics-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+        @media (max-width: 900px) {
+            .showcase-grid { grid-template-columns: 1fr; }
+            .ethics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">DMP // PORTFOLIO_OS</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="../index.html">Giới thiệu</a></li>
                     
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active">Các Dự Án ▾</a>
+                        <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
                             <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
                             <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
                             <li><a href="bai3.html">Bài 3: Kỹ thuật Prompt</a></li>
                             <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
-                            <li><a href="bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
+                            <li><a href="bai5.html" style="color: var(--accent);">Bài 5: AI sáng tạo nội dung</a></li>
                             <li><a href="bai6.html">Bài 6: AI có trách nhiệm</a></li>
                         </ul>
                     </li>
@@ -37,186 +72,111 @@
     </header>
 
     <main class="main-wrapper">
-        <section class="hero-section fade-in" style="padding-bottom: 1.5rem;">
-            <div class="container">
-                <a href="../index.html" class="link-arrow" style="font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">⇠ Quay lại Trang chủ</a>
-                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; line-height: 1.2;">
-                    Bài 5: Ứng Dụng GenAI Hỗ Trợ <br><span class="gradient-text">Sáng Tạo Nội Dung Số</span>
+        <section class="hero-section fade-in" style="padding-bottom: 2rem;">
+            <div class="container text-center" style="text-align: center;">
+                <span class="badge">BÀI TẬP 05 // MỤC 5.4</span>
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
+                    Ứng Dụng AI Tạo Sinh Trong <br><span class="gradient-text">Sáng Tạo Nội Dung Số</span>
                 </h1>
-                <p class="subtitle">Vận hành dòng chảy công việc (Workflow) đa công cụ thiết kế sản phẩm tri thức khoa học.</p>
+                <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Dự án Thiết kế Infographic: <strong>"Bản chất của Đại số tuyến tính trong AI: Hiểu ngôn ngữ của máy tính chỉ trong 3 phút"</strong> nhằm đơn giản hóa toán học phức tạp cho người mới bắt đầu.</p>
             </div>
         </section>
 
-        <section class="features-section">
-            <div class="container" style="max-width: 1000px;">
-                
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-                        <span style="font-size: 1.5rem;">🎯</span>
-                        <h3 style="margin-bottom: 0;">Ý tưởng sản phẩm truyền thông số</h3>
-                    </div>
-                    <p style="font-size: 0.95rem; text-align: justify; margin-bottom: 0.5rem;">
-                        <strong>Sản phẩm triển khai:</strong> Thiết kế Infographic chuyên sâu với chủ đề <span class="gradient-text" style="font-weight: 600;">"Bản chất của Đại số tuyến tính trong AI: Hiểu ngôn ngữ của máy tính chỉ trong 3 phút"</span>.
-                    </p>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); text-align: justify;">
-                        Mục tiêu cốt lõi là chuyển hóa các khái niệm toán học trừu tượng như Không gian Vector, Ma trận chuyển đổi, hay Giá trị riêng/Vector riêng thành sơ đồ thị giác trực quan dễ hiểu, giúp sinh viên công nghệ tiếp cận gốc rễ kiến trúc học máy (Machine Learning) một cách nhanh chóng nhất.
-                    </p>
+        <section class="features-section" style="padding-top: 2rem; padding-bottom: 3rem;">
+            <div class="container">
+                <div class="section-header fade-in" style="margin-bottom: 2rem;">
+                    <h2>TỔ HỢP CÔNG CỤ SÁNG TẠO</h2>
+                    <p class="subtitle">Kết hợp sức mạnh đa phương thức để tối ưu hóa quy trình thiết kế</p>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.2rem;">
-                        <span style="font-size: 1.5rem;">⚙️</span>
-                        <h3 style="margin-bottom: 0;">Kiến trúc luồng công việc đa công cụ AI (GenAI Workflow)</h3>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📝</div>
+                        <h3>Google Gemini (Biên tập)</h3>
+                        <p>Đóng vai trò "Chuyên gia AI". Sử dụng Prompt Persona để chuyển hóa các khái niệm trừu tượng (Vector, Ma trận, Tensor) thành ngôn ngữ đời thường, gắn liền với ví dụ thực tiễn (giá nhà, điểm ảnh) thay vì giữ nguyên định nghĩa hàn lâm khô khan.</p>
                     </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🎨</div>
+                        <h3>DALL-E 3 (Thị giác)</h3>
+                        <p>Đóng vai trò "Họa sĩ minh họa". Xử lý các Prompt chỉ định rõ phong cách thiết kế <em>(minimalist, flat design, isometric view, blue and purple neon colors)</em> để tạo ra bộ hình ảnh nền mang đậm chất công nghệ hiện đại, không bị nhiễu text.</p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">📐</div>
+                        <h3>Canva AI (Dàn trang)</h3>
+                        <p>Đóng vai trò "Trợ lý Layout". Rút ngắn thời gian tìm kiếm template bằng cách sinh tự động các bố cục (layout) phân khối dọc phù hợp với chủ đề công nghệ. Phần lớn thời gian sau đó được dành cho việc tinh chỉnh Typography và White-space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: var(--bg-surface); max-width: 1140px; padding: 2.5rem;">
                     
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="background: rgba(255,255,255,0.01); padding: 1.2rem; border-radius: 8px; border-left: 3px solid var(--accent); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap;">
-                                <h4 style="color: var(--text-white); margin: 0;">1. Định hình nội dung cốt lõi & Kỹ thuật Prompt</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent); font-weight: bold; font-family: 'Space Grotesk', sans-serif;">PLATFORM: GEMINI</span>
-                            </div>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 0.5rem;">
-                                <strong>Kỹ thuật tối ưu câu lệnh:</strong> Sử dụng phương pháp <em>Few-shot Prompting</em> kết hợp <em>Persona (Phân vai chuyên gia AI)</em> để bóc tách 3 khái niệm toán học tối giản, tích hợp ví dụ thực tế về ma trận điểm ảnh và định dạng phân khối nội dung chuẩn Infographic.
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem;">
+                        <h2>✨ THÀNH PHẨM INFOGRAPHIC HOÀN THIỆN</h2>
+                        <a href="../documents/Bài tập 5.2.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">📄 Xem Báo Cáo Phân Tích Prompt</a>
+                    </div>
+
+                    <div class="showcase-grid">
+                        <div>
+                            <h3 style="color: var(--accent); font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem;">Dấu Ấn Con Người (Human-in-the-loop)</h3>
+                            <p class="accent-text" style="color: var(--text-gray); font-weight: 400; text-align: justify; font-size: 0.95rem;">
+                                AI cung cấp nguyên liệu thô tuyệt vời, nhưng để trở thành một sản phẩm học thuật chuẩn xác, sự can thiệp của người tạo (Creator) là bắt buộc. Trong dự án này, tôi đóng vai trò là "Bộ lọc cuối cùng":
                             </p>
+                            <ul class="eco-list" style="margin-top: 1rem;">
+                                <li><strong>Cá nhân hóa Giọng văn:</strong> Tự tay viết lại các tiêu đề (Hook) thu hút hơn. Lược bỏ các từ nối rườm rà do Gemini sinh ra để tối ưu hóa không gian đọc.</li>
+                                <li><strong>Kiểm duyệt Toán học:</strong> AI sinh ảnh thường làm lỗi định dạng các biểu thức hoặc vector hình học. Tôi phải sử dụng công cụ thiết kế của Canva để đè lên, vẽ lại các trục tọa độ $(x, y, z)$ và điểm ảnh ma trận cho chính xác tuyệt đối.</li>
+                                <li><strong>Thẩm mỹ UI/UX:</strong> Tự tinh chỉnh lại font chữ (chuyển sang Sans-serif hiện đại), căn lề và xử lý phân cấp thông tin thị giác để mắt người đọc đi mượt mà từ khái niệm <em>Vector -> Ma trận -> Ứng dụng</em>.</li>
+                            </ul>
+                            
+                            <div style="margin-top: 2rem; background: var(--bg-dark); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.5rem; font-family: monospace;">>_ TRÍCH XUẤT PROMPT TẠO ẢNH NỀN</div>
+                                <img src="../assets/images/bai5-dalle.png" alt="Ảnh DALL-E 3" style="width: 100%; border-radius: 6px; opacity: 0.9;">
+                            </div>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.01); padding: 1.2rem; border-radius: 8px; border-left: 3px solid var(--accent); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap;">
-                                <h4 style="color: var(--text-white); margin: 0;">2. Tạo lập tài nguyên đồ họa thị giác trừu tượng</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent); font-weight: bold; font-family: 'Space Grotesk', sans-serif;">PLATFORM: DALL-E 3</span>
-                            </div>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 0.5rem;">
-                                <strong>Kỹ thuật tối ưu câu lệnh:</strong> Áp dụng phong cách thiết kế <em>Minimalist Flat Vector Illustration</em> phối hợp bảng màu công nghệ Cyberpunk. Câu lệnh ép mô hình sinh ra đồ họa mạng nơ-ron không chứa chữ để tránh lỗi răng cưa hiển thị văn bản hệ thống.
-                            </p>
-                        </div>
-
-                        <div style="background: rgba(255,255,255,0.01); padding: 1.2rem; border-radius: 8px; border-left: 3px solid var(--accent); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap;">
-                                <h4 style="color: var(--text-white); margin: 0;">3. Tổ chức cấu trúc cấu thành sản phẩm</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent); font-weight: bold; font-family: 'Space Grotesk', sans-serif;">PLATFORM: CANVA AI</span>
-                            </div>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 0.5rem;">
-                                <strong>Thao tác hoàn thiện:</strong> Sử dụng AI Magic Switch để dàn trang tự động theo tỷ lệ dài tiêu chuẩn, lắp ghép tư liệu hình ảnh DALL-E 3, đồng bộ phông chữ Plus Jakarta Sans và biên tập chỉnh sửa thủ công để tối ưu hóa tính thẩm mỹ.
-                            </p>
+                        <div class="product-frame" style="padding: 0.5rem; background: linear-gradient(to bottom, #0f172a, #020617); display: flex; justify-content: center;">
+                            <img src="../assets/images/bai5-infographic.png" alt="Infographic Đại số tuyến tính trong AI" class="product-img" style="border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
                         </div>
                     </div>
-                </div>
 
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">📊</span>
-                        <h3 style="margin-bottom: 0;">Đánh giá ưu nhược điểm kỹ thuật & Tác động quy trình</h3>
-                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ecosystem-section fade-in" style="padding-top: 0;">
+            <div class="container">
+                <div class="ecosystem-box" style="background: linear-gradient(135deg, #111827 0%, #090d16 100%); max-width: 1140px; border-color: rgba(16, 185, 129, 0.3);">
+                    <h2 style="color: var(--text-white);">⚖️ CAM KẾT ĐẠO ĐỨC TRONG SÁNG TẠO SỐ</h2>
+                    <p class="accent-text" style="color: var(--text-gray); font-size: 0.95rem;">Quá trình sử dụng AI tạo sinh luôn đi kèm với các rủi ro. Dưới đây là bộ nguyên tắc tôi đã áp dụng để đảm bảo tính liêm chính cho sản phẩm của mình:</p>
                     
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; color: var(--text-gray);">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent); background: rgba(255,255,255,0.02);">
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 15%;">Công cụ AI</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 40%;">Ưu điểm & Nhược điểm kỹ thuật cốt lõi</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 45%;">Tác động thực tế đến quy trình thiết kế</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Gemini <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Text)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">
-                                        <span style="color:#22c55e;">+</span> Khả năng cấu trúc thông tin logic, chia khối rất mượt.<br>
-                                        <span style="color:#ef4444;">-</span> Phản hồi ban đầu mang nặng tính hàn lâm, cần tinh chỉnh prompt.
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Đẩy nhanh tiến độ nghiên cứu dữ liệu và biên tập nội dung từ vài ngày xuống vài giờ. Dịch chuyển vai trò cá nhân từ <strong>người viết</strong> sang <strong>người kiểm duyệt/biên tập chuyên sâu</strong>.
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">DALL-E 3 <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Image)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">
-                                        <span style="color:#22c55e;">+</span> Thấu hiểu ngôn ngữ tự nhiên tốt, độ sắc nét chi tiết cao.<br>
-                                        <span style="color:#ef4444;">-</span> Không có khả năng xử lý biểu thức toán học chính xác trên ảnh.
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Khai phóng năng lực đồ họa cho người thiết kế không chuyên, tạo lập ảnh minh họa độc bản có tính tùy biến cao, thay đổi hoàn toàn thói quen tìm kiếm ảnh stock lưu trữ truyền thống.
-                                    </td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 600; vertical-align: top;">Canva AI <br><span style="font-size:0.75rem; font-weight:400; color:var(--text-gray);">(Design)</span></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">
-                                        <span style="color:#22c55e;">+</span> Giao diện kéo thả trực quan, đề xuất layout tự động nhanh.<br>
-                                        <span style="color:#ef4444;">-</span> Bố cục đôi khi rập khuôn, khối văn bản dễ bị lệch chữ tiếng Việt.
-                                    </td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">
-                                        Rút ngắn triệt để thời gian căn chỉnh và dàn trang sơ bộ, cho phép người dùng tập trung tối đa thời gian vào việc tinh chỉnh thẩm mỹ đồ họa kỹ thuật cao (Typography, Spacing).
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="ethics-grid">
+                        <div class="ethics-card">
+                            <div class="ethics-title">1. Chống "Ảo giác" (Hallucination)</div>
+                            <div class="ethics-desc">Mô hình ngôn ngữ có rủi ro tạo ra thông tin sai lệch về thuật ngữ chuyên môn. Giải pháp: Trực tiếp đối chiếu, rà soát lại kiến thức từ tài liệu chuyên ngành Cơ điện tử / Khoa học máy tính để đảm bảo tính chính xác 100%.</div>
+                        </div>
+                        <div class="ethics-card">
+                            <div class="ethics-title">2. Tôn trọng Sở hữu Trí tuệ (IP)</div>
+                            <div class="ethics-desc">AI có thể vô tình tái tạo lại các tác phẩm có bản quyền. Giải pháp: Yêu cầu AI sinh ra các hình ảnh mang tính trừu tượng/hình học thay vì sao chép phong cách họa sĩ. Tích cực cắt ghép, thiết kế lại bố cục để tạo ra bản sắc riêng.</div>
+                        </div>
+                        <div class="ethics-card">
+                            <div class="ethics-title">3. Minh bạch Dữ liệu</div>
+                            <div class="ethics-desc">Người xem có thể bị nhầm lẫn nếu không biết sự can thiệp của máy móc. Giải pháp: Công khai quá trình làm việc và ghi rõ minh bạch tỷ lệ đóng góp của AI. Đảm bảo chất xám cá nhân chiếm tỷ trọng quyết định (trên 50%) trong thành phẩm.</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🛡️</span>
-                        <h3 style="margin-bottom: 0;">Quản trị rủi ro đạo đức khi ứng dụng Trí tuệ nhân tạo</h3>
-                    </div>
-                    
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; color: var(--text-gray);">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--border); color: var(--accent); background: rgba(255,255,255,0.02);">
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 25%;">Vấn đề đạo đức tiêu biểu</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 35%;">Mô tả nguy cơ tiềm ẩn từ mô hình</th>
-                                    <th style="padding: 1rem 0.5rem; font-weight: 600; width: 40%;">Giải pháp kỹ thuật & Cam kết trách nhiệm cá nhân</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;"><strong>Tính chính xác học thuật</strong></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Mô hình có nguy cơ sinh ra ảo giác dữ liệu (Hallucination), làm sai lệch bản chất định nghĩa toán học chuyên sâu.</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">Trực tiếp rà soát, đối chiếu chéo toàn bộ dữ liệu định nghĩa trên Infographic với sách chuyên khảo Đại số tuyến tính chính thống.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;"><strong>Bản quyền & Sở hữu trí tuệ (IP)</strong></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">AI tạo ảnh vô tình tái lập các đường nét đồ họa đã được bảo hộ bản quyền từ tập dữ liệu huấn luyện gốc.</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">Sử dụng câu lệnh điều hướng đồ họa trừu tượng, tối giản. Tích cực thực hiện hậu kỳ, cắt ghép bổ sung để hình thành bản sắc riêng.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid var(--border);">
-                                    <td style="padding: 1rem 0.5rem; color: var(--text-white); font-weight: 500; vertical-align: top;"><strong>Tính minh bạch công nghệ</strong></td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top;">Người tiếp nhận sản phẩm truyền thông bị nhầm lẫn về năng lực đồ họa thực tế do sự can thiệp mập mờ của máy móc.</td>
-                                    <td style="padding: 1rem 0.5rem; vertical-align: top; line-height: 1.6;">Đóng dấu công khai nhãn <em>"Báo cáo quá trình đồng hành cùng AI"</em> và công bố cụ thể tỷ lệ đóng góp của con người ở cuối sản phẩm.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="feature-card fade-in" style="width: 100%; margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <span style="font-size: 1.5rem;">🖼️</span>
-                        <h3>Thành phẩm Đồ họa Truyền thông số Infographic</h3>
-                    </div>
-                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Dưới đây là mô hình sản phẩm Đồ họa kỹ thuật cao sau khi được tối ưu hóa toàn vẹn cấu trúc mỹ thuật bằng Canva AI:</p>
-                    
-                    <div class="product-frame" style="background: var(--bg-dark); text-align: center;">
-                        <img src="../assets/images/bai5-ai-content.jpg" alt="Sản phẩm Infographic Đại số tuyến tính Dương Minh Phương" class="product-img" style="max-width: 450px; border-radius: 6px;">
-                        <div class="spec-tag" style="max-width: 450px; margin: 10px auto 0 auto;">GRAPHIC_OUTPUT // LINEAR_ALGEBRA_IN_AI_PORTFOLIO</div>
-                    </div>
-                </div>
-
-                <div class="ecosystem-box fade-in" style="width: 100%; text-align: center; padding: 2.5rem 2rem;">
-                    <h3 style="color: var(--text-white); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">HỒ SƠ BÁO CÁO CHI TIẾT DỰ ÁN</h3>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Toàn bộ tiến trình thực thi, lịch sử nhập lệnh prompt chi tiết và phân tích chiều sâu đã được đóng gói thành file PDF lưu trữ hệ thống dưới đây.</p>
-                    
-                    <a href="../documents/bai5_ai_sang_tao.pdf" target="_blank" class="btn btn-primary">Xem Toàn Văn Báo Cáo PDF ➔</a>
-                </div>
-
             </div>
         </section>
     </main>
 
     <footer class="product-footer">
-        <div class="container footer-content">
-            <p>© 2026 Dương Minh Phương. Đã tối ưu hóa cấu trúc theo tiêu chí môn học.</p>
-            <p class="serial">MODULE: B5_GENAI_CONTENT_CREATION // DONE</p>
+        <div class="container footer-content" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <p style="margin: 0;">Copyright © 2026 Dương Minh Phương</p>
+            <p class="serial" style="margin: 0; font-size: 0.8rem; opacity: 0.8;">
+                ⚡ Powered by <span class="gradient-text" style="font-weight: 600;">Google Gemini</span>
+            </p>
         </div>
     </footer>
 
