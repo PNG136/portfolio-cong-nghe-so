@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 3: Kỹ Thuật Prompt | Personal Portfolio</title>
+    <title>Bài 3: Viết Prompt hiệu quả cho các tác vụ học tập | Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,12 +58,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" style="color: var(--text-white); border-bottom-color: var(--accent);">Các Dự Án ▾</a>
                         <ul class="dropdown-menu">
-                            <li><a href="bai1.html">Bài 1: Thao tác tệp tin</a></li>
-                            <li><a href="bai2.html">Bài 2: Tìm kiếm học thuật</a></li>
-                            <li><a href="bai3.html" style="color: var(--accent);">Bài 3: Kỹ thuật Prompt</a></li>
-                            <li><a href="bai4.html">Bài 4: Hợp tác trực tuyến</a></li>
-                            <li><a href="bai5.html">Bài 5: AI sáng tạo nội dung</a></li>
-                            <li><a href="bai6.html">Bài 6: AI có trách nhiệm</a></li>
+                            <li><a href="bai1.html">Bài 1: Thao tác cơ bản với tệp tin và thư mục</a></li>
+                            <li><a href="bai2.html">Bài 2: Tìm kiếm và đánh giá thông tin học thuật</a></li>
+                            <li><a href="bai3.html" style="color: var(--accent);">Bài 3: Viết Prompt hiệu quả cho các tác vụ học tập</a></li>
+                            <li><a href="bai4.html">Bài 4: Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</a></li>
+                            <li><a href="bai5.html">Bài 5: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</a></li>
+                            <li><a href="bai6.html">Bài 6: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</a></li>
                         </ul>
                     </li>
                     
@@ -78,7 +78,7 @@
             <div class="container text-center" style="text-align: center;">
                 <span class="badge">BÀI TẬP 03 // MỤC 3.4</span>
                 <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; margin-bottom: 1rem;">
-                    Nghệ Thuật <span class="gradient-text">Kỹ Sư Câu Lệnh (Prompt)</span>
+                    Viết Prompt hiệu quả cho các tác vụ học tập
                 </h1>
                 <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Nghiên cứu tính hiệu quả của các cấu trúc Prompt trong việc kiểm soát và nâng cao chất lượng dữ liệu đầu ra của mô hình ngôn ngữ lớn (Gemini 3.1 Pro).</p>
             </div>
@@ -135,9 +135,6 @@
                                     <strong>Đánh giá: Rập khuôn & Quá tải thuật ngữ</strong><br>
                                     AI truy xuất dữ liệu thụ động, trả về một đoạn văn bản nguyên khối chứa dày đặc thuật ngữ hàn lâm (autoregressive decoding, tokens, vector không gian...). Người mới bắt đầu hoàn toàn không thể tiếp thu, tạo ra rào cản nhận thức cực lớn.
                                 </div>
-                                <div style="margin-top: 1rem; text-align: center;">
-                                    <img src="../assets/images/bai3-basic.png" alt="Minh chứng Prompt Cơ bản" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--border);">
-                                </div>
                             </div>
                         </div>
 
@@ -148,19 +145,50 @@
                             </div>
                             <div class="prompt-content">
                                 <div class="prompt-label">Câu lệnh đầu vào (Input)</div>
-                                <div class="prompt-text" style="border-color: rgba(16, 185, 129, 0.4);">
-                                    "Đóng vai trò là Giáo sư Khoa học Máy tính. Giải thích khái niệm 'Chain-of-Thought'. Yêu cầu: <br>
-                                    1. Định nghĩa dễ tiếp cận.<br>
-                                    2. Phép loại suy (Analogy): So sánh CoT với hoạt động tư duy thường ngày (ví dụ: giải toán).<br>
-                                    3. Phân tích đối chiếu: So sánh Standard Prompting và CoT Prompting."
-                                </div>
+                                
+                                <iframe srcdoc="
+                                    <!DOCTYPE html>
+                                    <html lang='vi'>
+                                    <head>
+                                        <meta charset='UTF-8'>
+                                        <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap' rel='stylesheet'>
+                                        <style>
+                                            body {
+                                                margin: 0;
+                                                padding: 0;
+                                                background: transparent;
+                                                font-family: 'Plus Jakarta Sans', sans-serif;
+                                            }
+                                            .prompt-text {
+                                                font-family: monospace;
+                                                background: #000;
+                                                padding: 1rem;
+                                                border-radius: 8px;
+                                                color: #a5b4fc;
+                                                font-size: 0.9rem;
+                                                border: 1px solid rgba(16, 185, 129, 0.4);
+                                                line-height: 1.5;
+                                                text-align: left;
+                                                margin: 0;
+                                                box-sizing: border-box;
+                                            }
+                                        </style>
+                                    </head>
+                                    <body>
+                                        <div class='prompt-text'>
+                                            &quot;Đóng vai trò là một Giáo sư Khoa học Máy tính đang giảng bài cho sinh viên năm nhất. Nhiệm vụ của bạn là giải thích khái niệm 'Chain-of-Thought (CoT) Prompting'. Hãy cấu trúc bài giảng như sau:<br>
+                                            + Định nghĩa học thuật nhưng có thể tiếp cận được.<br>
+                                            + Phép loại suy (Analogy): Hãy tạo ra một ví dụ so sánh việc AI sử dụng CoT với một hoạt động tư duy thường ngày của con người (ví dụ: giải toán, lên kế hoạch du lịch...).<br>
+                                            + Phân tích đối chiếu: Cung cấp một ví dụ song song minh họa sự khác biệt giữa Standard Prompting (Prompt thông thường) và CoT Prompting để sinh viên thấy rõ lý do tại sao CoT hiệu quả hơn trong suy luận phức tạp.&quot;
+                                        </div>
+                                    </body>
+                                    </html>
+                                " style="width: 100%; height: 215px; border: none; overflow: hidden; display: block; margin-bottom: 1.5rem;"></iframe>
+
                                 <div class="prompt-label">Phân tích Kết quả đầu ra (Output)</div>
                                 <div class="ai-result success">
                                     <strong>Đánh giá: Tính sư phạm xuất sắc</strong><br>
                                     Kỹ thuật "Role-playing" kích hoạt luồng tri thức chuyên gia. AI tự động vẽ ra viễn cảnh sinh động (giải bài toán từng bước trên giấy nháp) để làm phép loại suy, giúp người học phá vỡ hoàn toàn "rào cản thuật ngữ" và thấu hiểu bản chất cơ chế hoạt động của thuật toán.
-                                </div>
-                                <div style="margin-top: 1rem; text-align: center;">
-                                    <img src="../assets/images/bai3-advanced.png" alt="Minh chứng Prompt Nâng cao" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--border);">
                                 </div>
                             </div>
                         </div>
