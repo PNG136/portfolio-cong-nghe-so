@@ -101,8 +101,6 @@ Dự án được thiết lập nghiêm ngặt theo mô hình cây thư mục ph
 * **Giấy phép Mã nguồn:** Các tệp tin cấu trúc giao diện (`index.html`, `style.css`, `script.js`) được phát hành dưới cấu trúc mã nguồn mở nhằm mục đích chia sẻ tri thức học thuật. Mọi hành vi sao chép, tái sử dụng giao diện hoặc nội dung báo cáo phân tích từ Portfolio này cho các kỳ đánh giá học phần tiếp theo mà không được sự chấp thuận của tác giả hoặc không trích dẫn nguồn rõ ràng đều bị coi là vi phạm nghiêm trọng quy chế Liêm chính học thuật.
 
 ***
-LÀM CHỦ AI — GIỮ VỮNG LIÊM CHÍNH HỌC THUẬT
-Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội (VNU-UET) // Chuyên ngành Cơ điện tử
 
 Copyright © 2026 Dương Minh Phương
 ⚡ Powered by Google Gemini Pro
